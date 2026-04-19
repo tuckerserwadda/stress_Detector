@@ -1,13 +1,16 @@
 import datetime
 import streamlit as st
 from text_input import render_text_input
+from questionnaire import render_questionnaire
 
 
 
 # Text input
 user_text = render_text_input()
 
-
+# Questionnaire (modularized)
+p_q, subscales, questionnaire_payload = render_questionnaire()
+questionnaire_payload = {"consent": False, "subscales": {}, "overall": None}
 
 
 
