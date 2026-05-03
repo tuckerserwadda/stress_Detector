@@ -2,6 +2,7 @@ import datetime
 import streamlit as st
 from text_input import render_text_input
 from questionnaire import render_questionnaire
+from camera_input import render_camera
 
 
 
@@ -12,7 +13,8 @@ user_text = render_text_input()
 p_q, subscales, questionnaire_payload = render_questionnaire()
 questionnaire_payload = {"consent": False, "subscales": {}, "overall": None}
 
-
+# Camera input
+pil_image = render_camera()
 
 
 if st.button("Analyze"):
